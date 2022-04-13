@@ -1,17 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <title>InterMoon</title>
+
 </head>
 <body>
 
-    <div class="contenedor">
-        <div class="cajas"></div>
-        <div class="cajas"></div>
-        <div class="cajas"></div>
+    <header>
+
+        <nav class="menu-navegacion contenedor"> 
+          <div class="logo">
+            <img src="../imagenes/logo.png" alt="el logo de la pagina">
+          </div>
+  
+          <nav class="nav-menu">
+
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i><img class="menu-icon" src="../imagenes/nav.png" alt="aqui el nav"></i>
+            </label>
+  
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./Suscripciones.html">Suscripciones</a></li>
+                <li><a href="./IniciarSeccion.html">Formulario</a></li>
+            </ul>
+
+          </nav>
+        </nav>
+    </header>
+
+    <div class = "contenedor">
+
+         <div class="cuadro">
+           <div class="titulo"></div>
+           <div class="imagen"></div>
+           <div class="texto"></div>  
+           <div class="nivel"></div>
+         </div>
+
+         <div class="cuadro">
+            <div class="titulo"></div>
+            <div class="imagen"></div>
+            <div class="texto"></div>  
+            <div class="nivel"></div>
+          </div>
+
+          <div class="cuadro">
+            <div class="titulo"></div>
+            <div class="imagen"></div>
+            <div class="texto"></div>  
+            <div class="nivel"></div>
+          </div>
+
+          <div class="cuadro">
+            <div class="titulo"></div>
+            <div class="imagen"></div>
+            <div class="texto"></div>  
+            <div class="nivel"></div>
+          </div>
+
     </div>
+
+    <!--- footer ----->
+
+    <footer>
+
+   
+
+        <!-- titulo -->
+        <div class="contenedor1">
+          <h2 class="titulo-seccion">Contacta Conmigo</h2>
+        </div>
+  
+        
+        <div class="redes-sociales">
+          <a href="http://www.facebook.com" class="icono"><img src="./imagenes/facebook.png" style="width: 50px;"></a>
+          <a href="http://www.instagram.com" class="icono"><img src="./imagenes/instragram.png" style="width: 50px;"></a>
+          <a href="http://www.linkedin.com" class="icono"><img src="./imagenes/Linkedin.png" style="width: 50px;"></a>
+        </div>
+  
+        <!-- Copyrigth -->
+        <div class="contenedor1">
+          <p class="copy">@ Gabriel</p>
+        </div>
+  
+      </footer>
+  
+      <!--- fin del footer ----->
+
+    <script src="./Scripts.js"></script>
+
 </body>
 </html>

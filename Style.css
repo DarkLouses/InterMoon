@@ -1,0 +1,351 @@
+* {
+
+    padding: 5;
+    text-decoration: none;
+    list-style: none;
+  
+  }
+  
+  body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  }
+
+  /* nav */
+  
+  .nav-menu  {
+  
+    display: flex;
+    justify-content: flex-end;
+    color: black;
+  
+  }
+  .nav-menu ul li {
+  
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .menu-icon {
+  
+    width: 50px;
+    height: 40px;
+    border-radius: 2px;
+  
+  }
+  
+   .nav-menu ul li {
+   
+     color: blueviolet;
+     
+   }
+  
+  #check {
+  
+    display: none;
+  
+  }
+  
+  
+  #check:checked ~ ul {
+    
+    left: 0;
+    transition: all .25s
+    
+  }
+  
+  .checkbtn {
+  
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  
+  }
+  
+  .menu-navegacion {
+  
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+  
+  }
+  
+  /* fin del nav */
+  
+  
+  /* barra de arriba */
+  .contenedor {
+  
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden; /* todo lo que sobresalga desaparece */
+    padding: 60px 0;
+  }
+  
+  /* menu */
+  
+  .menu-navegacion {
+  
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+  }
+  
+  .logo {
+  
+    height: 50px;
+  
+  }
+  
+  .logo img{
+  
+    display: block;
+    height: 100%;
+  
+  }
+  
+  .enlaces li{
+    list-style: none; /* para quitar estilos*/
+    display: inline-block;
+  }
+  
+  .enlaces a {
+  
+    text-decoration: none;
+    color: black;
+    padding-left: 10px;
+  }
+  
+  /* presentacion */
+  
+  .hero {
+    height: 500px;
+    background-image: url(imagenes/espacio.gif);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .hero h1{
+  
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
+  .hero p {
+  
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  
+  .boton {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 0;
+    background-color: blueviolet;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+  }
+  
+  .contenedor-textos{
+  
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* ---- fin de la presentacion ----- */
+  
+  /* barra de arriba */
+  
+  .contenedor {
+    
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    
+      
+  }
+  
+  .contenedor1 {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    
+  
+  }
+  
+  .cuadro {
+  
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-image: url();
+      background-repeat: repeat-x; ;
+      background-position:50%;
+      height: 400px;
+      width: 400px;
+      margin: 15px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgb(0, 0, 0, .4);
+      background-color: blue;
+      
+  }
+
+  .titulo {
+  
+    background-color: blueviolet;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    margin: 15px;
+    color: rgb(168, 226, 8);
+    font-size: 30px;
+  }
+  
+  .imagen {
+  
+    background-color: blueviolet;
+    background-image: url(imagenes/Cohete.jpg);
+    background-repeat: repeat-x; ;
+    background-position:50%;
+    width: 100%;
+    height: 200px;
+    background-color: brown;
+    margin: 15px;
+  }
+
+  footer {
+ 
+    background-color: gray;
+  }
+  
+  footer .titulo-seccion {
+    
+    color: blueviolet;
+  
+  }
+  
+  footer .copy {
+  
+    color: black;
+  
+  }
+  
+  .redes-sociales {
+  
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  
+  .redes-sociales a {
+  
+    font-size: 30px;
+    padding: 0 20px;
+    
+  }
+  
+  
+
+
+ @media screen and (max-width:720px) {
+  
+    .nav-menu ul {
+     display: block;
+     position: absolute;
+     top: 70px;
+     left: -100%;
+     background: black;
+     width: 100%;
+     height: 100vh;
+   
+   }
+ 
+   .nav-menu ul li {
+ 
+     padding: 2rem;
+     display: flex;
+     justify-content: center;
+     margin: 0;
+   
+   } 
+
+ }
+ 
+ @media screen and (min-width:720px) {
+ 
+   .nav-menu ul {
+ 
+     display: flex;
+     justify-content: center;
+   
+   }
+ 
+    .checkbtn {
+ 
+     display: none;
+ 
+   }
+ 
+   .menu-icon {
+ 
+     display: none;
+ 
+   }
+ 
+    .checkbtn img {
+ 
+     display: none;
+   }
+ 
+   
+   
+ }
+ 
+ @media screen and (min-width:1080px) {
+ 
+   .nav-menu ul {
+ 
+     display: flex;
+     justify-content: center;
+   
+   }
+   
+ 
+   .checkbtn {
+ 
+     display: none;
+     
+   }
+ 
+   .menu-icon {
+ 
+     display: none;
+ 
+   }
+ 
+   .checkbtn img {
+ 
+     display: none;
+   }
+   
+ }
