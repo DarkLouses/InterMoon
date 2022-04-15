@@ -16,7 +16,7 @@
       $baseDeDatos ="prueba";
  
       // Nombre de la tabla a trabajar
-      $tabla = "personas";
+      $tabla = "persona";
  
       function Conectarse()
       {
@@ -39,12 +39,11 @@
          else
          {
             echo "Obtuvimos la base de datos $baseDeDatos sin problema.<br>";
+            echo"hola";
          }
       return $link; 
       } 
  
      $link = Conectarse(); 
- 
 
- 
       ?>
