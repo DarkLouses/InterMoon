@@ -184,14 +184,6 @@
       
   }
   
-  .contenedor1 {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    
-  
-  }
-  
   .cuadro {
   
       display: flex;
@@ -220,17 +212,7 @@
     font-size: 30px;
   }
   
-  .imagen {
   
-    background-color: blueviolet;
-    background-image: url(imagenes/Cohete.jpg);
-    background-repeat: repeat-x; ;
-    background-position:50%;
-    width: 100%;
-    height: 200px;
-    background-color: brown;
-    margin: 15px;
-  }
 
   footer {
  
