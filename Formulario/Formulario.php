@@ -2,9 +2,7 @@
 
 include_once('./basedatos.php');
 
-$queryInsert = "INSERT INTO $tabla ('nombre') VALUES ('gabriel');";
-$resultInsert = mysqli_query($link, $queryInsert); 
-
+$link = Conectarse(); 
 
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
@@ -13,7 +11,7 @@ $resultInsert = mysqli_query($link, $queryInsert);
     $contraseña = $_POST['contraseña'];
     $telefono = $_POST['telefono'];
 
-   $queryInsert = "INSERT INTO $tabla VALUES ('$nombre , $apellido , $usuario , $email , $contraseña , $telefono');";
+   $queryInsert = "INSERT INTO $tabla VALUES ('$nombre' , '$apellido' , '$usuario' , '$email' , '$contraseña' , '$telefono');";
 
    $resultInsert = mysqli_query($link, $queryInsert); 
 
