@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link href="./formulario.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <form class="form" action="./Formulario.php" for="correo" method="post">
+
+        <h2 class="form_titulo">Crear Cuenta</h2>
+        <p class="form_tiene">¿Tienes Cuenta? <a href="./IniciarSeccion.html" class="form_link">Entra aqui</a></p>
+
+        <div class="form_contenedor">
+
+            <div class="form_grupo">
+                <input type="text" name="nombre" id="name" class="form_input" placeholder="Nombre" required = ""  maxlength="10" minlength="1">
+                <label for="name" class="form_label"></label>
+                <span class="form_line"></span>
+            </div>
+
+            <div class="form_grupo">
+                <input type="text" name="apellido" id="usuario" class="form_input" placeholder="apellido" required = ""  maxlength="10" minlength="1">
+                <label for="apellido" class="form_label"></label>
+                <span class="form_line"></span>
+            </div>
+
+            <div class="form_grupo">
+                <input type="text" name="usuario" id="usuario" class="form_input" placeholder="usuario" required ="" maxlength="10" minlength="1">
+                <label for="user" class="form_label"></label>
+                <span class="form_line"></span>
+            </div>
+
+            <div class="form_grupo">
+                <input type="email" name="email" id="correo" class="form_input" placeholder="email" required = "">
+                 <label for="correo" class="form_label"></label>
+                <span class="form_line"></span>
+            </div>
+
+            <div class="form_grupo">
+                <input type="password" name="contraseña" id="password" class="form_input" placeholder="Constraseña" required =""  maxlength="10" minlength="1">
+                <label for="password" class="form_label"></label>
+                <span class="form_line"></span>
+            </div>
+
+            <div class="form_grupo">
+              <input type="number" name="telefono" id="password" class="form_input" placeholder="telefono">
+              <label for="number" class="form_label"></label>
+              <span class="form_line"></span>
+          </div>
+
+
+            <input type="submit" class="form_submit" value="enviar">
+            <input type="reset" class="form_submit" value="resetear">
+
+        </div>
+    </form>
+    
+</body>
+</html>

@@ -8,7 +8,11 @@
   
   body {
 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: #59C173;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #5D26C1, #a17fe0, #59C173);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #5D26C1, #a17fe0, #59C173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
   }
 
@@ -72,7 +76,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 60px;
   
   }
   
@@ -125,58 +129,26 @@
     padding-left: 10px;
   }
   
-  /* presentacion */
+.contenedor-imagenes {
+
   
-  .hero {
-    height: 500px;
-    background-image: url(imagenes/espacio.gif);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    text-align: center;
-    color: #ffffff;
-  }
-  
-  .hero h1{
-  
-    font-size: 36px;
-    font-weight: 700;
-  }
-  
-  .hero p {
-  
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 30px;
-  }
-  
-  .boton {
-    width: 150px;
-    display: block;
-    margin: 0 auto;
-    padding: 15px 0;
-    background-color: blueviolet;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 20px;
-  }
-  
-  .contenedor-textos{
-  
-    padding: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* ---- fin de la presentacion ----- */
-  
-  /* barra de arriba */
+  display: flex;
+  justify-content: center;
+
+}
+
+.contenedor-imagenes img {
+
+  margin: 45px;
+  width: 900px;
+  height: 400px;
+  height: auto;
+
+}
   
   .contenedor {
     
+   
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
@@ -189,9 +161,9 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      background-image: url();
+      background-image: url(./imagenes/php.jpg);
       background-repeat: repeat-x; ;
-      background-position:50%;
+      background-position:54%;
       height: 400px;
       width: 400px;
       margin: 15px;
@@ -201,18 +173,44 @@
       
   }
 
+  .cuadro:nth-child(2) {
+
+    background-image: url(./imagenes/sql.png);
+    background-position:50%;
+  }
+
+  .cuadro:nth-child(3) {
+
+    background-image: url(./imagenes/javascript.png);
+    background-position:60%;
+  }
+
+  .cuadro:nth-child(4) {
+
+    background-image: url(./imagenes/java.png);
+    background-position:50%;
+  }
+
+
   .titulo {
   
-    background-color: blueviolet;
+    background-color: wheat;
     width: 100%;
     height: 60px;
     text-align: center;
     margin: 15px;
-    color: rgb(168, 226, 8);
+    color: rgb(95, 15, 241);
     font-size: 30px;
   }
   
   
+  .contenedor1 {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    
+  
+  }
 
   footer {
  
