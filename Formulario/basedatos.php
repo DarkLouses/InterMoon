@@ -39,7 +39,7 @@
          else
          {
             echo "Obtuvimos la base de datos $baseDeDatos sin problema.<br>";
-            echo"hola";
+   
          }
       return $link; 
       } 
