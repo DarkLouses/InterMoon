@@ -54,14 +54,12 @@
           </div>
 
 
-            <input type="button" id="enviar" class="form_submit" value="enviar">
+            <input type="submit" id="enviar" class="form_submit" value="enviar">
             <input type="reset" class="form_submit" value="resetear">
 
         </div>
     </form>
 
-    
-    
 </body>
 
 <script>
@@ -74,9 +72,8 @@
         var email = document.getElementById('email').value;
         var contraseña = document.getElementById('constraseña').value;
         var telefono = document.getElementById('telefono').value;
-     
-
-        var ruta = "nom="+nombre+"&ape="+apellido+"&usua="+usuario+"&ema="+email+"&cons="+contraseña+"&telef="+telefono;
+    
+        var ruta = "&nom="+nombre+"&ape="+apellido+"&usua="+usuario+"&ema="+email+"&cons="+contraseña+"&telef="+telefono;
 
         $.ajax({
 
@@ -95,14 +92,6 @@
                 console.log("procesando");
             });
         });
-
-        document.getElementById("enviar").addEventListener("click" , recargar);
-
-        function recargar() {
-
-            location.reload();
-
-        }
 
 </script>
 
