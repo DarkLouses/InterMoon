@@ -2,23 +2,19 @@
 
 include_once('./basedatos.php');
 
-$link = Conectarse(); 
+    $nombre = $_POST['nom'];
+    $apellido = $_POST['ape'];
+    $usuario = $_POST['usua'];
+    $email = $_POST['ema'];
+    $contraseña = $_POST['cons'];
+    $telefono = $_POST['telef'];
 
-    $nombre = $_POST['nombre'];
-    $apellido = $_POST['apellido'];
-    $usuario = $_POST['usuario'];
-    $email = $_POST['email'];
-    $contraseña = $_POST['contraseña'];
-    $telefono = $_POST['telefono'];
+    for($i = 0; $i < 10000; $i++){
 
    $queryInsert = "INSERT INTO $tabla VALUES ('$nombre' , '$apellido' , '$usuario' , '$email' , '$contraseña' , '$telefono');";
 
    $resultInsert = mysqli_query($link, $queryInsert); 
 
-echo $nombre.  "<br>";
-echo $apellido. "<br>";
-echo $usuario.  "<br>";
-echo $email.  "<br>";
-echo $contraseña. "<br>";
-echo $telefono;
+   
+}
 ?>
