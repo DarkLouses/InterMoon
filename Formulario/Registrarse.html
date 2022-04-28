@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link href="./formulario.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 </head>
 <body>
 
-    <form class="form" action="./Formulario.php" for="correo" method="post">
+    <form class="form">
 
         <h2 class="form_titulo">Crear Cuenta</h2>
         <p class="form_tiene">¿Tienes Cuenta? <a href="./IniciarSeccion.html" class="form_link">Entra aqui</a></p>
@@ -17,13 +18,13 @@
         <div class="form_contenedor">
 
             <div class="form_grupo">
-                <input type="text" name="nombre" id="name" class="form_input" placeholder="Nombre" required = ""  maxlength="10" minlength="1">
+                <input type="text" name="nombre" id="nombre" class="form_input" placeholder="Nombre" required = ""  maxlength="10" minlength="1">
                 <label for="name" class="form_label"></label>
                 <span class="form_line"></span>
             </div>
 
             <div class="form_grupo">
-                <input type="text" name="apellido" id="usuario" class="form_input" placeholder="apellido" required = ""  maxlength="10" minlength="1">
+                <input type="text" name="apellido" id="apellido" class="form_input" placeholder="apellido" required = ""  maxlength="10" minlength="1">
                 <label for="apellido" class="form_label"></label>
                 <span class="form_line"></span>
             </div>
@@ -35,29 +36,74 @@
             </div>
 
             <div class="form_grupo">
-                <input type="email" name="email" id="correo" class="form_input" placeholder="email" required = "">
+                <input type="email" name="email" id="email" class="form_input" placeholder="email" required = "">
                  <label for="correo" class="form_label"></label>
                 <span class="form_line"></span>
             </div>
 
             <div class="form_grupo">
-                <input type="password" name="contraseña" id="password" class="form_input" placeholder="Constraseña" required =""  maxlength="10" minlength="1">
+                <input type="password" name="contraseña" id="constraseña" class="form_input" placeholder="Constraseña" required =""  maxlength="10" minlength="1">
                 <label for="password" class="form_label"></label>
                 <span class="form_line"></span>
             </div>
 
             <div class="form_grupo">
-              <input type="number" name="telefono" id="password" class="form_input" placeholder="telefono">
+              <input type="number" name="telefono" id="telefono" class="form_input" placeholder="telefono">
               <label for="number" class="form_label"></label>
               <span class="form_line"></span>
           </div>
 
 
-            <input type="submit" class="form_submit" value="enviar">
+            <input type="button" id="enviar" class="form_submit" value="enviar">
             <input type="reset" class="form_submit" value="resetear">
 
         </div>
     </form>
+
+    
     
 </body>
+
+<script>
+
+    $('#enviar').click(function() {
+
+        var nombre = document.getElementById('nombre').value;
+        var apellido = document.getElementById('apellido').value;
+        var usuario = document.getElementById('usuario').value;
+        var email = document.getElementById('email').value;
+        var contraseña = document.getElementById('constraseña').value;
+        var telefono = document.getElementById('telefono').value;
+     
+
+        var ruta = "nom="+nombre+"&ape="+apellido+"&usua="+usuario+"&ema="+email+"&cons="+contraseña+"&telef="+telefono;
+
+        $.ajax({
+
+            url: 'Formulario.php',
+            type: 'POST',
+            data: ruta,
+        })
+            .done(function(res){
+                console.log("enviado");
+            })
+            .fail(function() {
+                console.log("error");
+            })
+
+            .always(function(){
+                console.log("procesando");
+            });
+        });
+
+        document.getElementById("enviar").addEventListener("click" , recargar);
+
+        function recargar() {
+
+            location.reload();
+
+        }
+
+</script>
+
 </html>
