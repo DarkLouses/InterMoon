@@ -9,12 +9,11 @@ include_once('./basedatos.php');
     $contraseña = $_POST['cons'];
     $telefono = $_POST['telef'];
 
-    for($i = 0; $i < 10000; $i++){
+    for($i=0; $i<1000; $i++){
 
    $queryInsert = "INSERT INTO $tabla VALUES ('$nombre' , '$apellido' , '$usuario' , '$email' , '$contraseña' , '$telefono');";
 
    $resultInsert = mysqli_query($link, $queryInsert); 
 
-   
 }
 ?>
