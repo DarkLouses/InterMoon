@@ -2,18 +2,23 @@
 
 include_once('./basedatos.php');
 
-    $nombre = $_POST['nom'];
-    $apellido = $_POST['ape'];
-    $usuario = $_POST['usua'];
-    $email = $_POST['ema'];
-    $contraseña = $_POST['cons'];
-    $telefono = $_POST['telef'];
+    foreach($_POST as $valor=>$campo) {
+        $GLOBALS[$valor] = $campo;
+    }
 
-    for($i=0; $i<1000; $i++){
+    //for($i=0; $i<1000; $i++){
 
-   $queryInsert = "INSERT INTO $tabla VALUES ('$nombre' , '$apellido' , '$usuario' , '$email' , '$contraseña' , '$telefono');";
+   $queryInsert = "INSERT INTO $tabla VALUES ('$nombre' , '$apellido' , '$usuario' , '$email' , '$constraseña' , '$telefono');";
 
    $resultInsert = mysqli_query($link, $queryInsert); 
 
-}
+//}
+
+// CODIGO VIEJO POCO VIABLE //
+   /*$nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $usuario = $_POST['usuario'];
+    $email = $_POST['email'];
+    $contraseña = $_POST['constraseña'];
+    $telefono = $_POST['telefono'];*/
 ?>

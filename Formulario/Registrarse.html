@@ -54,7 +54,7 @@
           </div>
 
 
-            <input type="submit" id="enviar" class="form_submit" value="enviar">
+            <input type="button" id="enviar" class="form_submit" value="enviar">
             <input type="reset" class="form_submit" value="resetear">
 
         </div>
@@ -66,15 +66,15 @@
 
     $('#enviar').click(function() {
 
-        var nombre = document.getElementById('nombre').value;
-        var apellido = document.getElementById('apellido').value;
-        var usuario = document.getElementById('usuario').value;
-        var email = document.getElementById('email').value;
-        var contraseña = document.getElementById('constraseña').value;
-        var telefono = document.getElementById('telefono').value;
-    
-        var ruta = "&nom="+nombre+"&ape="+apellido+"&usua="+usuario+"&ema="+email+"&cons="+contraseña+"&telef="+telefono;
+        // funcion que retorna la sentencia data de ajax //
+        function ob(valor) {
 
+           return "&"+valor+"="+document.getElementById(valor).value;
+
+        }
+
+         var ruta = ob('nombre')+ob('apellido')+ob('usuario')+ob('email')+ob('constraseña')+ob('telefono');
+      
         $.ajax({
 
             url: 'Formulario.php',
@@ -92,6 +92,16 @@
                 console.log("procesando");
             });
         });
+
+        // CODIGO VIEJO POCO VIABLE //
+        /*var nombre = document.getElementById('nombre').value;
+        var apellido = document.getElementById('apellido').value;
+        var usuario = document.getElementById('usuario').value;
+        var email = document.getElementById('email').value;
+        var contraseña = document.getElementById('constraseña').value;
+        var telefono = document.getElementById('telefono').value;*/
+
+        //var ruta = "&nombre="+nombre+"&apellido="+apellido+"&usuario="+usuario+"&email="+email+"&constraseña="+contraseña+"&telefono="+telefono;
 
 </script>
 
